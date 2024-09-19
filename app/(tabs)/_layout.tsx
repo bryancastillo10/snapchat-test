@@ -6,6 +6,7 @@ import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { useFirstTimeOpen } from '@/hooks/useFirstTimeOpen';
 
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
   const {isFirstTime, isLoading} = useFirstTimeOpen();
@@ -24,16 +25,7 @@ export default function TabLayout() {
         options={{
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabBarIcon name={'camera' } color={color} />
           ),
         }}
       />
